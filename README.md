@@ -188,10 +188,10 @@ Resources:
 It’s no surprise that the development of artificial intelligence took over the RSA Conference this year with the rise of AI model customization. One company, Hidden Layer, took the win with their very popular “MLDR” while VirusTotal announced their new code analyzer called Code Insight. The platform, powered by Google Cloud’s new Security AI Workbench, takes code or scripting input and outputs plaintext describing in detail, what the commands are doing, for what purpose, and whether for good or bad. The platform can be used by security analysts, but also by development and intelligence teams who are looking to debug, harden code, or dynamically and statically analyze processes in a safe environment. 
 
 Resources:
-•	https://blog.virustotal.com/2023/04/introducing-virustotal-code-insight.html (VirusTotal Announcement)
-•	https://www.prnewswire.com/news-releases/google-cloud-announces-new-security-ai-workbench-and-ecosystem-expansion-at-rsac-2023-301804984.html (Google Security AI Workbench Announcement)
-•	https://www.securityweek.com/rsa-conference-2023-announcements-summary-day-1/ (All RSA Conference Announcements)
-•	YouTube – “HiddenLayer – RSA Conference 2023 Innovation Sandbox”
+- https://blog.virustotal.com/2023/04/introducing-virustotal-code-insight.html (VirusTotal Announcement)
+- https://www.prnewswire.com/news-releases/google-cloud-announces-new-security-ai-workbench-and-ecosystem-expansion-at-rsac-2023-301804984.html (Google Security AI Workbench Announcement)
+- https://www.securityweek.com/rsa-conference-2023-announcements-summary-day-1/ (All RSA Conference Announcements)
+- YouTube – “HiddenLayer – RSA Conference 2023 Innovation Sandbox”
 
 
 ## 2023-05-02 - Microsoft AtRisk <a name="atrisk"></a>
