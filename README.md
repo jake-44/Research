@@ -136,7 +136,7 @@ https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigat
 
 
 ## 2023-03-28 - Raspberry Robin <a name="rasp"></a>
-read through the Raspberry Robin section within the Red Canary Threat Detection Report for 2023 and identify the code name used for the DLL file associated with the malware. The DLL known as “Roshtyak” is downloaded from the internet using msiexec, following successful execution, and is normally found randomly named in a randomly named directory in the following file path: 
+Reading through the Raspberry Robin section within the Red Canary Threat Detection Report for 2023 and identify the code name used for the DLL file associated with the malware. The DLL known as “Roshtyak” is downloaded from the internet using msiexec, following successful execution, and is normally found randomly named in a randomly named directory in the following file path: 
 
 C:\ProgramData\<randomly-named subdirectory> 
 
@@ -150,7 +150,7 @@ https://redcanary.com/threat-detection-report/threats/raspberry-robin/
 
 
 ## 2023-04-04 - 3CX VOIP Compromise <a name="3cx"></a>
-dive into the recent 3CX VOIP desktop client compromise which is believed to be carried out by a North-Korean state-backed group called “Labyrinth Chollima”. As said best in the security advisory recently sent out to our clients (#135319), the highly sophisticated attack being dubbed the “SmoothOperator”, “…starts when an installer file is downloaded from 3CX’s website or when an update is pushed to an already installed desktop application. When the application is updated or installed, malicious DLLs (or libraries) are sideloaded and used to execute malicious code on the affected system.” The binaries used in this attack are legitimate BUT manipulated files associated with 3CX installations:
+Diving into the recent 3CX VOIP desktop client compromise which is believed to be carried out by a North-Korean state-backed group called “Labyrinth Chollima”. As said best in the security advisory recently sent out to our clients, the highly sophisticated attack being dubbed the “SmoothOperator”, “…starts when an installer file is downloaded from 3CX’s website or when an update is pushed to an already installed desktop application. When the application is updated or installed, malicious DLLs (or libraries) are sideloaded and used to execute malicious code on the affected system.” The binaries used in this attack are legitimate BUT manipulated files associated with 3CX installations:
 
 ffmpeg.dll - https://www.virustotal.com/gui/file/7986bbaee8940da11ce089383521ab420c443ab7b15ed42aed91fd31ce833896 (52/70)
 d3dcompiler_47.dll - https://www.virustotal.com/gui/file/11be1803e2e307b647a8a7e02d128335c448ff741bf06bf52b332e0bbf423b03 (39/70)
@@ -171,7 +171,7 @@ https://news.sophos.com/en-us/2023/03/29/3cx-dll-sideloading-attack/
 
 
 ## 2023-04-11 - CVE-2023-28205 & CVE-2023-28206 Apple IOSurfaceAccelerator and WebKit Vulnerabilities <a name="apple"></a>
-research the two Apple product zero-day vulnerabilities involving the IOSurfaceAccelerator and WebKit, both of which were patched this past Friday (2023-04-07). The IOSurfaceAccelerator vulnerability or CVE-2023-28206, takes advantage of an Out-of-Bounds Write weakness within the IOSurfaceAccelerator that allows a malicious application to execute arbitrary code with kernel privileges (protection ring level 0, full machine privilege). This weakness typically occurs when the pointer or its index is incremented or decremented to a position beyond the bounds of the buffer or when pointer arithmetic results in a position outside of the valid memory location. This was addressed with improved input validation.
+Research the two Apple product zero-day vulnerabilities involving the IOSurfaceAccelerator and WebKit, both of which were patched this past Friday (2023-04-07). The IOSurfaceAccelerator vulnerability or CVE-2023-28206, takes advantage of an Out-of-Bounds Write weakness within the IOSurfaceAccelerator that allows a malicious application to execute arbitrary code with kernel privileges (protection ring level 0, full machine privilege). This weakness typically occurs when the pointer or its index is incremented or decremented to a position beyond the bounds of the buffer or when pointer arithmetic results in a position outside of the valid memory location. This was addressed with improved input validation.
 
 The WebKit vulnerability, CVE-2023-28205, takes advantage of a Use-After-Free (UAF) weakness within the Apple WebKit which processes malicious web content through applications, Safari, or email. This malicious content includes code that leverages the UAF weakness by referencing memory after it has been freed which can cause a program to crash, use unexpected values, or execute code. This was addressed with improved memory management. 
 
@@ -240,7 +240,7 @@ Which chmod command you should avoid using as much as possible. The chmod comman
 
 
 ## 2023-08-19 - CVE-2023-36895 Microsoft ActiveX <a name="activex"></a>
-the Outlook vulnerability noted in this month’s patch Tuesday. CVE-2023-36895 identifies a critical Microsoft Outlook RCE vulnerability which originates from a flaw in the way that Outlook parses certain types of “ActiveX” controls. ActiveX is an embedded software framework created by Microsoft that other applications can reuse to enable the same functionality. A specially crafted phishing file containing one of these ActiveX controls containing malicious code are used for exploitation.
+The Outlook vulnerability noted in this month’s patch Tuesday. CVE-2023-36895 identifies a critical Microsoft Outlook RCE vulnerability which originates from a flaw in the way that Outlook parses certain types of “ActiveX” controls. ActiveX is an embedded software framework created by Microsoft that other applications can reuse to enable the same functionality. A specially crafted phishing file containing one of these ActiveX controls containing malicious code are used for exploitation.
 
 Resources:
 https://www.rapid7.com/blog/post/2023/08/08/patch-tuesday-august-2023/
@@ -249,7 +249,7 @@ https://www.crowdstrike.com/blog/patch-tuesday-analysis-august-2023/
 
 
 ## 2023-09-19 - 2020 Microsoft Data Leak <a name="data"></a>
-to research and find the source of a Microsoft data leak that occurred back in 2020. In summary, a Microsoft AI research division employee accidentally shared the URL for a misconfigured Azure Blob storage bucket containing sensitive data while contributing open-source AI learning models to a public GitHub repository. The repository's README.md file instructed developers to download the models from an Azure Storage URL that was misconfigured, indirectly granting access to an entire storage account, containing additional private data. 
+Research and find the source of a Microsoft data leak that occurred back in 2020. In summary, a Microsoft AI research division employee accidentally shared the URL for a misconfigured Azure Blob storage bucket containing sensitive data while contributing open-source AI learning models to a public GitHub repository. The repository's README.md file instructed developers to download the models from an Azure Storage URL that was misconfigured, indirectly granting access to an entire storage account, containing additional private data. 
 
 Accessors were able to access the information with the use of a Shared Access Signature (SAS) token, which was intended to allow only read-only permissions but instead was configured to allow "full control" over the shared files. SAS tokens are an Azure feature for sharing data and offering a secure means of granting delegated access to resources within a storage account. It has been noted that Microsoft does not provide a centralized way to manage (or log) them within the Azure portal and their usage should be avoided due to this lack of governance.
 
@@ -261,7 +261,7 @@ https://thehackernews.com/2023/09/microsoft-ai-researchers-accidentally.html
 https://dataconomy.com/2023/09/18/microsoft-data-leak-wiz-azure/
 
 ## 2023-10-03 - Quishing <a name="qr"></a>
-to suggest some ways we can reduce the risk of the QR code phishing (Quishing) campaign TTPs. We can derive a lot of tactics for QR code phishing from normal phishing emails, where obtaining user credentials is the motivation for attack. With this in mind, we can conduct proper end user training.
+Suggest some ways we can reduce the risk of the QR code phishing (Quishing) campaign TTPs. We can derive a lot of tactics for QR code phishing from normal phishing emails, where obtaining user credentials is the motivation for attack. With this in mind, we can conduct proper end user training.
 •	Approach external emails with caution. Especially those asking for credentials or personal information.
 •	If no QR code activity is applicable for the environment to include vendor and client communication, inform your team that this should not be expected. (QR code policy)
 •	If a trusted sender is requesting a QR code to be scanned, report the email or ask them to send the content in another form. (Confirm with sender via out-of-band channel)
@@ -283,7 +283,7 @@ https://www.csoonline.com/article/651400/perception-point-tackles-qr-code-phishi
 
 
 ## 2023-10-10 - NSA and CISA Joint Cybersecurity Advisory <a name="advise"></a>
-review the NSA and CISA Joint Cybersecurity Advisory regarding their teams’ top ten cybersecurity misconfigurations and discuss one of them. The most critical, relevant, and overlooked, in my opinion is number 10, “Unrestricted code execution”. This refers to a situation where a user or program has the ability to execute any type of code without any limitations or restrictions, for good or bad.
+Review the NSA and CISA Joint Cybersecurity Advisory regarding their teams’ top ten cybersecurity misconfigurations and discuss one of them. The most critical, relevant, and overlooked, in my opinion is number 10, “Unrestricted code execution”. This refers to a situation where a user or program has the ability to execute any type of code without any limitations or restrictions, for good or bad.
 
 This misconfiguration can be leveraged in many ways and at any point in a kill chain to cause damage. The example the agencies provide is a phishing email containing a file that executes arbitrary code on the victim’s machine after being clicked on. However, it can also be used to establish persistence, lateral move throughout the environment, obtain system level privileges, and more, depending on the objective.
 There are many configuration recommendations for locking down code execution within an environment due to the large attack surface available. 
