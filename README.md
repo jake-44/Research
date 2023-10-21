@@ -32,14 +32,14 @@
 
 
 ## Description
-This is my description
+This content includes some notes I've taken on some of the topics I've researched in the past. I try to highlight the important details and what my key takeaways are.
 
 ## 2022-09-13 - iOS 16 Security <a name="ios"></a>
 Pretty interesting stuff regarding Apple’s new update. It implemented the use of “Lockdown Mode” which provides additional messaging, web browsing, and connectivity protection that blocks commercial spyware (like NSO Group's Pegasus) used by government-backed attackers to monitor compromised Apple devices. Apple said, "turning on Lockdown Mode in iOS 16, iPadOS 16, and macOS Ventura further hardens device defenses and strictly limits certain functionalities, sharply reducing the attack surface that potentially could be exploited by highly targeted mercenary spyware.” 
 
 My thought is that they needed something to combat this zero day software which had previously stole information from the phone of Amazon’s ex CEO, Jeff Bezos. This should put the public at ease. 
 
-Ref:
+Resource:
 https://www.bleepingcomputer.com/news/apple/apple-released-ios-16-with-lockdown-safety-check-security-features/
 
 
@@ -50,20 +50,20 @@ C:\Users\user\AppData\Local\Temp\winver.dll
 
 **These download packages that include the trojan have the tendency to be signed by the legitimate publisher for means of evading detection.
 
-Ref:
+Resource:
 https://www.bleepingcomputer.com/news/security/romcom-rat-malware-campaign-impersonates-keepass-solarwinds-npm-veeam/
 
 ## 2022-12-06 - Rackspace <a name="rack"></a>
 Rackspace, a cloud computing service provider, had recently experienced an outage which was affecting its Microsoft Exchange environments. Though unconfirmed, experts have reason to believe that Rackspace was running a Microsoft Exchange server version that is vulnerable to the “ProxyNotShell” vulnerability. This was a zero-day exploit discovered in the wild just two months ago which installs web shells on Microsoft Exchange servers. Although Microsoft had patched this vulnerability in November, Rackspace did not keep up to date with their patches and was running the server patch version from August. Four days later, Rackspace confirmed that the affected exchange server is the result of ransomware and as of right now, is too early to tell what data might have been accessed and how much revenue will be lost. Not to mention the lingering loss of business following the event, all due to patch management (and lazy analysts?).
 
-Ref:
+Resource:
 https://www.bleepingcomputer.com/news/security/rackspace-confirms-outage-was-caused-by-ransomware-attack/
 
 
 ## 2022-12-27 - LastPass Breach <a name="last"></a>
 Continuing on to this week’s attention check involving a breach in the password management firm, Last Pass, they’ve had a rough few months since their development environment was compromised in August 2022. This activity stemmed from a threat actor gaining access to a developer’s account and successfully bypassing multi-factor authentication, to which they had access for roughly four days. Initially, the response from LastPass’ CEO was that “…our system design and controls prevented the threat actor from accessing any customer data or encrypted password vaults", however, according to the CEO’s most recent announcement (Dec 22), there’s a lot to unpack but essentially the threat actor copied user’s PII, host IP addresses, contact information, encrypted backups containing passwords and usernames for specified domains.
 
-Ref:
+Resource:
 https://www.bleepingcomputer.com/news/security/lastpass-developer-systems-hacked-to-steal-source-code/ (August)
 https://www.bleepingcomputer.com/news/security/lastpass-says-hackers-had-internal-access-for-four-days/ (September)
 https://www.bleepingcomputer.com/news/security/lastpass-hackers-stole-customer-vault-data-in-cloud-storage-breach/ (December)
@@ -72,7 +72,7 @@ https://www.bleepingcomputer.com/news/security/lastpass-hackers-stole-customer-v
 ## 2023-01-03 - SentinelSneak Trojan <a name="sentinel"></a>
 This week’s attention check dives into a newly discovered trojan campaign named “SentinelSneak”, which involves a malicious Python package disguised as a SentinelOne agent installer. The backdoor is designed to exfiltrate data specific to development environments, such as shell command execution history and the contents of the SSH folder, which stores SSH keys and configuration information, including login credentials for Git, Kubernetes, and AWS services. The malicious package has been manipulated at least 20 times since its discovery which indicates the attackers are fine tuning it to evade detection and hone the code to fit the target scope.
 
-References:
+Resources:
 https://www.darkreading.com/vulnerabilities-threats/malicious-python-trojan-impersonates-sentinelone-security-client
 https://www.securityweek.com/malicious-pypi-module-poses-sentinelone-sdk
 https://www.reversinglabs.com/blog/sentinelsneak-malicious-pypi-module-poses-as-security-sdk
