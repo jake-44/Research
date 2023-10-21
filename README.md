@@ -56,7 +56,7 @@ https://www.bleepingcomputer.com/news/security/romcom-rat-malware-campaign-imper
 ## 2022-12-06 - Rackspace <a name="rack"></a>
 Rackspace, a cloud computing service provider, had recently experienced an outage which was affecting its Microsoft Exchange environments. Though unconfirmed, experts have reason to believe that Rackspace was running a Microsoft Exchange server version that is vulnerable to the “ProxyNotShell” vulnerability. This was a zero-day exploit discovered in the wild just two months ago which installs web shells on Microsoft Exchange servers. Although Microsoft had patched this vulnerability in November, Rackspace did not keep up to date with their patches and was running the server patch version from August. Four days later, Rackspace confirmed that the affected exchange server is the result of ransomware and as of right now, is too early to tell what data might have been accessed and how much revenue will be lost. Not to mention the lingering loss of business following the event, all due to patch management (and lazy analysts?).
 
-Resource:
+Resource: 
 https://www.bleepingcomputer.com/news/security/rackspace-confirms-outage-was-caused-by-ransomware-attack/
 
 
