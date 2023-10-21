@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Weekly Dives](#project-name)
+- **[Weekly Dives]**
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [iOS 16 Security](#ios)
