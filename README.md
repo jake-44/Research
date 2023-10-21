@@ -40,7 +40,7 @@ Pretty interesting stuff regarding Apple’s new update. It implemented the use 
 My thought is that they needed something to combat this zero day software which had previously stole information from the phone of Amazon’s ex CEO, Jeff Bezos. This should put the public at ease. 
 
 Resource:
-https://www.bleepingcomputer.com/news/apple/apple-released-ios-16-with-lockdown-safety-check-security-features/
+- https://www.bleepingcomputer.com/news/apple/apple-released-ios-16-with-lockdown-safety-check-security-features/
 
 
 ## 2022-11-01 - RomCom RAT <a name="rat"></a>
@@ -51,31 +51,31 @@ C:\Users\user\AppData\Local\Temp\winver.dll
 **These download packages that include the trojan have the tendency to be signed by the legitimate publisher for means of evading detection.
 
 Resource:
-https://www.bleepingcomputer.com/news/security/romcom-rat-malware-campaign-impersonates-keepass-solarwinds-npm-veeam/
+- https://www.bleepingcomputer.com/news/security/romcom-rat-malware-campaign-impersonates-keepass-solarwinds-npm-veeam/
 
 ## 2022-12-06 - Rackspace <a name="rack"></a>
 Rackspace, a cloud computing service provider, had recently experienced an outage which was affecting its Microsoft Exchange environments. Though unconfirmed, experts have reason to believe that Rackspace was running a Microsoft Exchange server version that is vulnerable to the “ProxyNotShell” vulnerability. This was a zero-day exploit discovered in the wild just two months ago which installs web shells on Microsoft Exchange servers. Although Microsoft had patched this vulnerability in November, Rackspace did not keep up to date with their patches and was running the server patch version from August. Four days later, Rackspace confirmed that the affected exchange server is the result of ransomware and as of right now, is too early to tell what data might have been accessed and how much revenue will be lost. Not to mention the lingering loss of business following the event, all due to patch management (and lazy analysts?).
 
 Resource: 
-https://www.bleepingcomputer.com/news/security/rackspace-confirms-outage-was-caused-by-ransomware-attack/
+- https://www.bleepingcomputer.com/news/security/rackspace-confirms-outage-was-caused-by-ransomware-attack/
 
 
 ## 2022-12-27 - LastPass Breach <a name="last"></a>
 Continuing on to this week’s attention check involving a breach in the password management firm, Last Pass, they’ve had a rough few months since their development environment was compromised in August 2022. This activity stemmed from a threat actor gaining access to a developer’s account and successfully bypassing multi-factor authentication, to which they had access for roughly four days. Initially, the response from LastPass’ CEO was that “…our system design and controls prevented the threat actor from accessing any customer data or encrypted password vaults", however, according to the CEO’s most recent announcement (Dec 22), there’s a lot to unpack but essentially the threat actor copied user’s PII, host IP addresses, contact information, encrypted backups containing passwords and usernames for specified domains.
 
 Resource:
-https://www.bleepingcomputer.com/news/security/lastpass-developer-systems-hacked-to-steal-source-code/ (August)
-https://www.bleepingcomputer.com/news/security/lastpass-says-hackers-had-internal-access-for-four-days/ (September)
-https://www.bleepingcomputer.com/news/security/lastpass-hackers-stole-customer-vault-data-in-cloud-storage-breach/ (December)
+- https://www.bleepingcomputer.com/news/security/lastpass-developer-systems-hacked-to-steal-source-code/ (August)
+- https://www.bleepingcomputer.com/news/security/lastpass-says-hackers-had-internal-access-for-four-days/ (September)
+- https://www.bleepingcomputer.com/news/security/lastpass-hackers-stole-customer-vault-data-in-cloud-storage-breach/ (December)
 
 
 ## 2023-01-03 - SentinelSneak Trojan <a name="sentinel"></a>
 This week’s attention check dives into a newly discovered trojan campaign named “SentinelSneak”, which involves a malicious Python package disguised as a SentinelOne agent installer. The backdoor is designed to exfiltrate data specific to development environments, such as shell command execution history and the contents of the SSH folder, which stores SSH keys and configuration information, including login credentials for Git, Kubernetes, and AWS services. The malicious package has been manipulated at least 20 times since its discovery which indicates the attackers are fine tuning it to evade detection and hone the code to fit the target scope.
 
 Resources:
-https://www.darkreading.com/vulnerabilities-threats/malicious-python-trojan-impersonates-sentinelone-security-client
-https://www.securityweek.com/malicious-pypi-module-poses-sentinelone-sdk
-https://www.reversinglabs.com/blog/sentinelsneak-malicious-pypi-module-poses-as-security-sdk
+- https://www.darkreading.com/vulnerabilities-threats/malicious-python-trojan-impersonates-sentinelone-security-client
+- https://www.securityweek.com/malicious-pypi-module-poses-sentinelone-sdk
+- https://www.reversinglabs.com/blog/sentinelsneak-malicious-pypi-module-poses-as-security-sdk
 
 
 ## 2023-01-10 - ChatGPT in Cyber <a name="chat"></a>
@@ -84,8 +84,8 @@ For the attention check this week, we were to look into the open-source, artific
 The list can be extensive because there is a lot to be said on this topic, but the capabilities of the AI seem to balance out between both blue teaming and red teaming scenarios. Some of these capabilities, as of now, involve engineering and reverse engineering malware, designing flawless phishing emails, scraping the internet for intelligence, developing scripts, scans, vulnerability detection within networks and coding segments that includes descriptive proof of concept… The possibilities and examples are endless, to an extent, if you apply the correct training techniques to the AI for your desired scenario. Regardless of its reputation, ChatGPT is currently another valuable tool within cybersecurity.
 
 Resources:
-https://www.bleepingcomputer.com/news/technology/openais-new-chatgpt-bot-10-dangerous-things-its-capable-of/
-https://www.darkreading.com/attacks-breaches/attackers-are-already-exploiting-chatgpt-to-write-malicious-code
+- https://www.bleepingcomputer.com/news/technology/openais-new-chatgpt-bot-10-dangerous-things-its-capable-of/
+- https://www.darkreading.com/attacks-breaches/attackers-are-already-exploiting-chatgpt-to-write-malicious-code
 
 
 ## 2023-01-24 - Lunch n' Learn <a name="lunch"></a>
@@ -98,24 +98,24 @@ Our attention check this week included detailing the OneNote exploit that has re
 This attack vector is becoming popular in use by Qakbot, RATs, and worms for the simplicity of infecting a machine.
 
 Resource:
-https://opalsec.substack.com/p/the-defenders-guide-to-onenote-maldocs?sd=pf
+- https://opalsec.substack.com/p/the-defenders-guide-to-onenote-maldocs?sd=pf
 
 
 ## 2023-02-14 - Patch Tuesday <a name="patch"></a>
 In summary, there were nine critical vulnerabilities that were tended to. These include RCE through Visual Studio, Windows iSCSI, and PEAP protocol exploitation, according to Microsoft. I found the most important and relevant to our every day job was CVE-2023-21716 which defines a notable Microsoft 365 exploit stemming from a rich text format (RTF) formatted file payload that when opened (even in the preview pane), grants RCE. Threat actors can construct and format their phishing campaign payloads to take advantage of this exploit if the client does not have a file block policy in place.
 
 Resources:
-https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21716
-https://www.tenable.com/blog/microsofts-february-2023-patch-tuesday-addresses-75-cves-cve-2023-23376#:~:text=CVE%2D2023%2D21716%20is%20a,applications%20is%20an%20attack%20vector.
+- https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21716
+- https://www.tenable.com/blog/microsofts-february-2023-patch-tuesday-addresses-75-cves-cve-2023-23376#:~:text=CVE%2D2023%2D21716%20is%20a,applications%20is%20an%20attack%20vector.
 
 
 ## 2023-03-07 - Wazuh <a name="wazuh"></a>
 Understanding Wazuh. Wazuh provides unified SIEM and XDR protection through cloud monitoring, endpoint agents, and agentless monitoring for devices such as routers, firewalls, and switches that do not support the installation of agents. Unlike our NIDS AlienVault, Wazuh can perform responsive actions like removing malicious files, blocking malicious network connections, and other active countermeasures.
 
 Resources:
-https://wazuh.com/
-https://www.bleepingcomputer.com/news/security/wazuh-the-free-and-open-source-xdr-platform/
-https://www.g2.com/products/wazuh-the-open-source-security-platform/reviews
+- https://wazuh.com/
+- https://www.bleepingcomputer.com/news/security/wazuh-the-free-and-open-source-xdr-platform/
+- https://www.g2.com/products/wazuh-the-open-source-security-platform/reviews
 
 
 ## 2023-03-21 - CVE-2023-23397 "Zero-Touch" Calendar Invite <a name="zero"></a>
@@ -131,8 +131,8 @@ Once attackers are in the system, they can use the network for lateral movement 
 There are no significant indicators of compromise besides unusual NTLM authentication and port 445 (SMB) traffic involving external IP addresses as well as post exploitation activity involving mailbox modifications and usage for further activity.
 
 Resources:
-https://www.trendmicro.com/en_us/research/23/c/patch-cve-2023-23397-immediately-what-you-need-to-know-and-do.html
-https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/
+- https://www.trendmicro.com/en_us/research/23/c/patch-cve-2023-23397-immediately-what-you-need-to-know-and-do.html
+- https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/
 
 
 ## 2023-03-28 - Raspberry Robin <a name="rasp"></a>
@@ -145,8 +145,8 @@ The malware employs multiple layers of obfuscation within the code as well as a 
 Nasty activity occurs following this DLL execution including process privilege elevation, penetration testing (exception checks), permission enumeration, shellcode execution, covering tracks, and MUCH MORE possible “pre-ransomware behavior”.
 
 Resources:
-https://decoded.avast.io/janvojtesek/raspberry-robins-roshtyak-a-little-lesson-in-trickery/
-https://redcanary.com/threat-detection-report/threats/raspberry-robin/
+- https://decoded.avast.io/janvojtesek/raspberry-robins-roshtyak-a-little-lesson-in-trickery/
+- https://redcanary.com/threat-detection-report/threats/raspberry-robin/
 
 
 ## 2023-04-04 - 3CX VOIP Compromise <a name="3cx"></a>
@@ -165,9 +165,9 @@ From research, both binaries work in conjunction with each other to achieve the 
 *This is spooky since 3CX is used by over 600,000 companies worldwide and has over 12 million daily users including high-profile companies that drive The United States’ economy and carry millions of people’s PII*
 
 Resources:
-https://www.3cx.com/blog/news/security-incident-updates/
-https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/
-https://news.sophos.com/en-us/2023/03/29/3cx-dll-sideloading-attack/ 
+- https://www.3cx.com/blog/news/security-incident-updates/
+- https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/
+- https://news.sophos.com/en-us/2023/03/29/3cx-dll-sideloading-attack/ 
 
 
 ## 2023-04-11 - CVE-2023-28205 & CVE-2023-28206 Apple IOSurfaceAccelerator and WebKit Vulnerabilities <a name="apple"></a>
@@ -178,10 +178,10 @@ The WebKit vulnerability, CVE-2023-28205, takes advantage of a Use-After-Free (U
 These vulnerabilities are for old device generations prior to the 8th iPhone, iPads before the 5th, and MacOS Ventura.
 
 Resources:
-https://support.apple.com/en-us/HT213723
-https://www.bleepingcomputer.com/news/apple/apple-fixes-recently-disclosed-zero-days-on-older-iphones-and-ipads/
-https://www.cvedetails.com/cwe-details/787/Out-of-bounds-Write.html
-https://www.cvedetails.com/cwe-details/416/Use-After-Free.html
+- https://support.apple.com/en-us/HT213723
+- https://www.bleepingcomputer.com/news/apple/apple-fixes-recently-disclosed-zero-days-on-older-iphones-and-ipads/
+- https://www.cvedetails.com/cwe-details/787/Out-of-bounds-Write.html
+- https://www.cvedetails.com/cwe-details/416/Use-After-Free.html
 
 
 ## 2023-04-25 - Hidden Layer Artificial Intelligence <a name="ai"></a>
@@ -206,9 +206,9 @@ Read up about the outage which Microsoft faced yesterday 2023-06-05, that preven
 These claims are unverified.
 
 Resources:
-bleepingcomputer.com/news/microsoft/outlookcom-hit-by-outages-as-hacktivists-claim-ddos-attacks/
-https://cybernews.com/security/microsoft-outlook-outage-anonymous-sudan/
-https://www.radware.com/cyberpedia/ddos-attacks/anonymous-sudan/
+- bleepingcomputer.com/news/microsoft/outlookcom-hit-by-outages-as-hacktivists-claim-ddos-attacks/
+- https://cybernews.com/security/microsoft-outlook-outage-anonymous-sudan/
+- https://www.radware.com/cyberpedia/ddos-attacks/anonymous-sudan/
 
 
 ## 2023-06-20 - CLoP Cybercrime <a name="clop"></a>
@@ -217,10 +217,10 @@ This week’s attention check was to research the exploit conducted by the cyber
 The exploit targets a previously known SQL injection vulnerability in the MOVEit web application that has the identifier (CVE-2023-34362) and CVSS score of 9.8. It utilizes a specially crafted web shell called human2.aspx and legitimate binaries within the software, to establish a successful reverse shell, arbitrary code execution, privilege escalation, and ultimately payload deployment. It takes all of a few minutes to conduct the breach which John Hammond of Huntress actually expedited with a basic Meterpreter session. This is shown in the proof of concept in the reference section below.
 
 Resources:
-https://www.huntress.com/blog/moveit-transfer-critical-vulnerability-rapid-response
-https://www.bleepingcomputer.com/news/security/new-moveit-transfer-zero-day-mass-exploited-in-data-theft-attacks/
-https://nvd.nist.gov/vuln/detail/CVE-2023-34362
-https://www.bleepstatic.com/images/news/ransomware/c/clop/clop-message-dls.jpg (Hilarious Ransom Note)
+- https://www.huntress.com/blog/moveit-transfer-critical-vulnerability-rapid-response
+- https://www.bleepingcomputer.com/news/security/new-moveit-transfer-zero-day-mass-exploited-in-data-theft-attacks/
+- https://nvd.nist.gov/vuln/detail/CVE-2023-34362
+- https://www.bleepstatic.com/images/news/ransomware/c/clop/clop-message-dls.jpg (Hilarious Ransom Note)
 
 
 ## 2023-07-11 - Big Head Ransomware <a name="big"></a>
@@ -231,8 +231,8 @@ In the weeds, a .NET binary installs three encrypted files, a propagation tool, 
 Over-all the goal is money. Although the second and third variants steal browser data, directory listings, passwords, ect. Likely Russia.
 
 Resources:
-https://www.bleepingcomputer.com/news/security/new-big-head-ransomware-displays-fake-windows-update-alert/
-https://www.fortinet.com/blog/threat-research/fortiguard-labs-ransomware-roundup-big-head
+- https://www.bleepingcomputer.com/news/security/new-big-head-ransomware-displays-fake-windows-update-alert/
+- https://www.fortinet.com/blog/threat-research/fortiguard-labs-ransomware-roundup-big-head
 
 
 ## 2023-08-01 - chmod <a name="chmod"></a>
@@ -243,9 +243,9 @@ Which chmod command you should avoid using as much as possible. The chmod comman
 The Outlook vulnerability noted in this month’s patch Tuesday. CVE-2023-36895 identifies a critical Microsoft Outlook RCE vulnerability which originates from a flaw in the way that Outlook parses certain types of “ActiveX” controls. ActiveX is an embedded software framework created by Microsoft that other applications can reuse to enable the same functionality. A specially crafted phishing file containing one of these ActiveX controls containing malicious code are used for exploitation.
 
 Resources:
-https://www.rapid7.com/blog/post/2023/08/08/patch-tuesday-august-2023/
-https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2023-36895
-https://www.crowdstrike.com/blog/patch-tuesday-analysis-august-2023/
+- https://www.rapid7.com/blog/post/2023/08/08/patch-tuesday-august-2023/
+- https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2023-36895
+- https://www.crowdstrike.com/blog/patch-tuesday-analysis-august-2023/
 
 
 ## 2023-09-19 - 2020 Microsoft Data Leak <a name="data"></a>
@@ -256,9 +256,9 @@ Accessors were able to access the information with the use of a Shared Access Si
 The Wiz Research Team found that the exposed data included backups of personal information belonging to Microsoft employees, including passwords for Microsoft services, secret keys, and an archive of over 30,000 internal Microsoft Teams messages.
 
 Resources:
-https://www.bleepingcomputer.com/news/microsoft/microsoft-leaks-38tb-of-private-data-via-unsecured-azure-storage/
-https://thehackernews.com/2023/09/microsoft-ai-researchers-accidentally.html
-https://dataconomy.com/2023/09/18/microsoft-data-leak-wiz-azure/
+- https://www.bleepingcomputer.com/news/microsoft/microsoft-leaks-38tb-of-private-data-via-unsecured-azure-storage/
+- https://thehackernews.com/2023/09/microsoft-ai-researchers-accidentally.html
+- https://dataconomy.com/2023/09/18/microsoft-data-leak-wiz-azure/
 
 ## 2023-10-03 - Quishing <a name="qr"></a>
 Suggest some ways we can reduce the risk of the QR code phishing (Quishing) campaign TTPs. We can derive a lot of tactics for QR code phishing from normal phishing emails, where obtaining user credentials is the motivation for attack. With this in mind, we can conduct proper end user training.
@@ -276,10 +276,10 @@ Additionally, research suggests that organizations use image recognition tools a
 With or without the assistance of technology, end user training trumps all priorities.
 
 Resources:
-https://www.techtarget.com/searchsecurity/feature/Quishing-on-the-rise-How-to-prevent-QR-code-phishing
-https://www.qryptal.com/blog/secure-qr-can-artificial-intelligence-help-detect-malicious-qr-codes/
-https://perception-point.io/blog/qr-code-red-quishing-attacks-and-how-to-prevent-them/
-https://www.csoonline.com/article/651400/perception-point-tackles-qr-code-phishing-attacks-2.html#:~:text=Perception%20Point's%20Advanced%20Email%20Security,attempts%2C%20according%20to%20the%20vendor.
+- https://www.techtarget.com/searchsecurity/feature/Quishing-on-the-rise-How-to-prevent-QR-code-phishing
+- https://www.qryptal.com/blog/secure-qr-can-artificial-intelligence-help-detect-malicious-qr-codes/
+- https://perception-point.io/blog/qr-code-red-quishing-attacks-and-how-to-prevent-them/
+- https://www.csoonline.com/article/651400/perception-point-tackles-qr-code-phishing-attacks-2.html#:~:text=Perception%20Point's%20Advanced%20Email%20Security,attempts%2C%20according%20to%20the%20vendor.
 
 
 ## 2023-10-10 - NSA and CISA Joint Cybersecurity Advisory <a name="advise"></a>
@@ -295,7 +295,7 @@ There are many configuration recommendations for locking down code execution wit
 Most applications support secure default settings to prevent this misconfiguration, but newly discovered vulnerabilities and supply chain attacks do not guarantee this. Additionally, common TTPs such as obfuscating code make it hard for allowlists to operate as intended, hence the reason for mitigative solutions and not just preventative (Access Management). 
 
 Resources:
-https://attack.mitre.org/versions/v13/techniques/T1027/010/
-https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/administer-software-restriction-policies
-https://media.defense.gov/2023/Oct/05/2003314578/-1/-1/0/JOINT_CSA_TOP_TEN_MISCONFIGURATIONS_TLP-CLEAR.PDF
+- https://attack.mitre.org/versions/v13/techniques/T1027/010/
+- https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/administer-software-restriction-policies
+- https://media.defense.gov/2023/Oct/05/2003314578/-1/-1/0/JOINT_CSA_TOP_TEN_MISCONFIGURATIONS_TLP-CLEAR.PDF
 
