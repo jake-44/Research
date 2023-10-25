@@ -3,8 +3,8 @@
 ## Table of Contents
 
 - **Weekly Dives**
-  - [Table of Contents]
-  - [Description]
+  - Table of Contents
+  - Description
     - **2022**
       - [iOS 16 Security](#ios)
       - [RomCom RAT](#rat)
