@@ -222,7 +222,7 @@ Resources:
 - https://www.huntress.com/blog/moveit-transfer-critical-vulnerability-rapid-response
 - https://www.bleepingcomputer.com/news/security/new-moveit-transfer-zero-day-mass-exploited-in-data-theft-attacks/
 - https://nvd.nist.gov/vuln/detail/CVE-2023-34362
-- https://www.bleepstatic.com/images/news/ransomware/c/clop/clop-message-dls.jpg (Hilarious Ransom Note)
+- https://www.bleepstatic.com/images/news/ransomware/c/clop/clop-message-dls.jpg (Ransom Note)
 
 
 ## 2023-07-11 - Big Head Ransomware <a name="big"></a>
