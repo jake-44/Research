@@ -31,6 +31,8 @@
       - [2020 Microsoft Data Leak](#data)
       - [Quishing](#qr)
       - [NSA and CISA Joint Cybersecurity Advisory](#advise)
+      - [Search Engine Optimization (SEO) Poisoning](#seo)
+      - [Msbuild.exe -> XML](#xml)
 
 
 ## Description
@@ -301,3 +303,20 @@ Resources:
 - https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/administer-software-restriction-policies
 - https://media.defense.gov/2023/Oct/05/2003314578/-1/-1/0/JOINT_CSA_TOP_TEN_MISCONFIGURATIONS_TLP-CLEAR.PDF
 
+
+## 2023-11-07 - Search Engine Optimization (SEO) Poisoning <a name="seo"></a>
+This week’s research regarded members of a team clicking on a malicious Google sponsored link that was imitating a legitimate third-party vendor. Threat actors leverage many key components that play into how Google’s algorithms determine which link is sponsored to appear first after a search. These components often include key word stuffing, cloaking, and article spinning, essentially bolstering their authenticity (to the search engine’s “crawlers”) as an active web page that supports the legitimate business. These sites commonly utilize “doorway pages” and typo squatting techniques as a way to avoid detection and redirect users to a malicious domain. 
+
+Something that I found interesting is that Google and other search engines actually penalize the legitimate organization for one or multiple malicious domains and webpages “backlinking” to your legitimate domain. So out of no control of your own, you can find yourself losing reputation within a search engine just from being targeted by a threat actor but not necessarily being attacked. Backlinking is simply listing another website or domain as a redirect or hyperlink within your domain. However, proactive SEO audits can be performed to boost the reputation of your link / domain. 
+
+Resources: 
+- https://www.blackberry.com/us/en/solutions/endpoint-security/ransomware-protection/seo-poisoning#threats
+- https://www.crowdstrike.com/cybersecurity-101/attack-types/seo-poisoning/ 
+
+
+##2023-11-14 - Msbuild.exe -> XML <a name="xml"></a>
+An interesting IOC was recently discovered in the wild which involved msbuild.exe targeting an extensible markup language payload file. Msbuild locally compiles available source code or software to build an application project or solution file. After initial compromise with the help of remote access tools, webclient was observed being used to download cradle the XML file along with other remote access tools and .msi files. The significance of the XML file is that it is essentially a payload which contained C# programming which was actually forking an online project or LOLBin in order to load an instance of Metasploit in the memory of the machine. Also notably able to bypass anti virus. This calls for immediate isolation if observed as developers rarely utilize this build method.
+
+Resources: 
+- https://www.huntress.com/blog/third-party-pharmaceutical-vendor-linked-to-pharmacy-and-health-clinic-cyberattack
+- https://attack.mitre.org/techniques/T1027/004/
