@@ -314,7 +314,7 @@ Resources:
 - https://www.crowdstrike.com/cybersecurity-101/attack-types/seo-poisoning/ 
 
 
-##2023-11-14 - Msbuild.exe -> XML <a name="xml"></a>
+## 2023-11-14 - Msbuild.exe -> XML <a name="xml"></a>
 An interesting IOC was recently discovered in the wild which involved msbuild.exe targeting an extensible markup language payload file. Msbuild locally compiles available source code or software to build an application project or solution file. After initial compromise with the help of remote access tools, webclient was observed being used to download cradle the XML file along with other remote access tools and .msi files. The significance of the XML file is that it is essentially a payload which contained C# programming which was actually forking an online project or LOLBin in order to load an instance of Metasploit in the memory of the machine. Also notably able to bypass anti virus. This calls for immediate isolation if observed as developers rarely utilize this build method.
 
 Resources: 
