@@ -365,8 +365,8 @@ CVE-2024-21887 is a command injection vulnerability in the web component that co
 If CVE-2024-21887 is used in conjunction with CVE-2023-46805, exploitation does not require authentication and enables a threat actor to craft malicious requests and execute arbitrary commands on the system. Both vulnerabilities rate a CVSS score of 8.2 and 9.1 and have been actively exploited in the wild, allegedly by a Chinese state sponsored group.
  
 Resources: 
-https://packetstormsecurity.com/files/176668/Ivanti-Connect-Secure-Unauthenticated-Remote-Code-Execution.html
-https://arcticwolf.com/resources/blog/cve-2024-21887-cve-2023-46805/
+- https://packetstormsecurity.com/files/176668/Ivanti-Connect-Secure-Unauthenticated-Remote-Code-Execution.html
+- https://arcticwolf.com/resources/blog/cve-2024-21887-cve-2023-46805/
 
 
 ## 2024-02-06 - AnyDesk Breach <a name="any"></a>
@@ -381,6 +381,6 @@ AnyDesk stated that session hijacking posed no risk in this case. Consequently, 
 This case was particularly spooky because it resembles the 2019-2020 SolarWinds breach that infected 18,000 customers within the federal and private sectors with a trojanized version of SolarWinds Orion. Some dub this as one of the most widespread and sophisticated hacking campaigns ever conducted against the federal government and private sector. AnyDesk’s case was caught just one phase prior to this.
  
 Resources:
-https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
-https://www.spiceworks.com/it-security/data-security/news/anydesk-server-breach/
-https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic
+- https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
+- https://www.spiceworks.com/it-security/data-security/news/anydesk-server-breach/
+- https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic
