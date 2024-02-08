@@ -33,6 +33,10 @@
       - [NSA and CISA Joint Cybersecurity Advisory](#advise)
       - [Search Engine Optimization (SEO) Poisoning](#seo)
       - [Msbuild.exe -> XML](#xml)
+    - **2024**
+      - [NetScaler CVEs](#netscaler)
+      - [Ivanti CVEs](#ivanti)
+      - [AnyDesk Breach](#any)
 
 
 ## Description
@@ -320,3 +324,63 @@ An interesting IOC was recently discovered in the wild which involved msbuild.ex
 Resources: 
 - https://www.huntress.com/blog/third-party-pharmaceutical-vendor-linked-to-pharmacy-and-health-clinic-cyberattack
 - https://attack.mitre.org/techniques/T1027/004/
+
+
+## 2024-01-16 - NetScaler CVEs <a name="netscaler"></a>
+Beginning with the NetScaler CVE and associated devices noted below, two vulnerabilities for two different customer-managed Citrix NetScaler devices have been actively exploited in the wild.
+ 
+•  CVE-2023-6548 - NetScaler ADC (formerly Citrix ADC)
+ 
+The Application Delivery Controller or ADC is quite literally a multi-tool for application networking. It operates as an intermediary between clients (such as web browsers) and servers, helping to ensure that user requests are handled efficiently and securely. Some of the key functionalities provided by Citrix ADC includes load balancing, monitoring and management, traffic direction, and serves as an application firewall.
+ 
+The attack vector for CVE-2023-6548 is through the Management Interface of the NetScaler ADC. This interface is typically accessed via a web browser or command-line interface and is intended for use by administrators to manage the appliance settings. The vulnerability allows an attacker to inject and execute arbitrary code on the appliance, which can lead to remote code execution (RCE) (initially with low privileges). This means that an attacker could potentially gain control over the NetScaler ADC appliance and manipulate its behavior, intercept or modify traffic, create new routing rules, or perform other malicious activities.
+ 
+The pre-requisite for an attacker to exploit CVE-2023-6548 is to have access to one of the IP addresses used by the Management Interface, which could be the NetScaler IP (NSIP), Cluster IP (CLIP), or Subnet IP (SNIP). This access implies that the attacker already has some level of network access, either through prior compromise or because they are an insider threat (e.g., a low-privileged user who has legitimate access to the Management Interface).
+ 
+It is important to note that while the attack requires authenticated access, the attacker does not necessarily need to have high-level administrative privileges. Even a low-privileged user account could potentially exploit this vulnerability if they have access to the Management Interface.
+ 
+•  CVE-2023-6549 - NetScaler Gateway (formerly Citrix Gateway)
+ 
+The NetScaler Gateway is a secure application, desktop, and data access solution that gives IT administrators application and data-level control while providing users with SSO remote access from anywhere. In other words, a juicy VPN gateway.
+ 
+The vulnerability identifies a critical buffer overflow flaw in the NetScaler Gateway, which could be exploited by an attacker to cause a Denial of Service (DoS). In order for the vulnerability to be exploitable, the NetScaler appliance must be configured to operate in specific roles such as a gateway with services like a VPN virtual server, ICA Proxy, CVPN, or RDP Proxy enabled, or as an AAA virtual server.
+ 
+The attack vector consists of sending specially crafted packets to the vulnerable service, which due to inadequate buffer size validation, could result in an overflow condition. This overflow can disrupt the normal functioning of the appliance, leading to a DoS condition where legitimate users may be unable to access network resources. Exploiting this vulnerability would result in service interruption, causing operational impact without necessarily granting the attacker unauthorized access to sensitive data or system privileges. However, the risk is significant as it can affect the availability of critical network services.
+ 
+Resources:
+(CVE-2023-6548)
+- https://arcticwolf.com/resources/blog/cve-2023-6548-cve-2023-6549-dos-and-rce-vulnerabilities-exploited-in-citrix-netscaler-adc-and-netscaler-gateway/
+- https://support.citrix.com/article/CTX584986/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve20236548-and-cve20236549
+ 
+(CVE-2023-6549)
+- https://www.tenable.com/blog/cve-2023-6548-cve-2023-6549-zero-day-vulnerabilities-netscaler-adc-gateway-exploited
+- https://arcticwolf.com/resources/blog/cve-2023-6548-cve-2023-6549-dos-and-rce-vulnerabilities-exploited-in-citrix-netscaler-adc-and-netscaler-gateway/
+
+
+## 2024-01-30 - Ivanti CVEs <a name="ivanti"></a>
+Ivanti Connect Secure (ICS), formerly known as Pulse Connect Secure and Ivanti Policy Secure gateways. Both devices provide a seamless, cost-effective, SSL VPN solution for remote and mobile users from any web-enabled device to corporate resources anytime, anywhere.
+ 
+CVE-2024-21887 is a command injection vulnerability in the web component that could allow an authenticated threat actor to send specially crafted requests and execute arbitrary commands on the vulnerable appliance. On the other hand, CVE-2023-46805 is an authentication bypass vulnerability in the web components that could allow a remote threat actor to access the vulnerable appliance by bypassing control checks.  
+ 
+If CVE-2024-21887 is used in conjunction with CVE-2023-46805, exploitation does not require authentication and enables a threat actor to craft malicious requests and execute arbitrary commands on the system. Both vulnerabilities rate a CVSS score of 8.2 and 9.1 and have been actively exploited in the wild, allegedly by a Chinese state sponsored group.
+ 
+Resources: 
+https://packetstormsecurity.com/files/176668/Ivanti-Connect-Secure-Unauthenticated-Remote-Code-Execution.html
+https://arcticwolf.com/resources/blog/cve-2024-21887-cve-2023-46805/
+
+
+## 2024-02-06 - AnyDesk Breach <a name="any"></a>
+I looked into the recent incident involving the remote access tool, AnyDesk’s data breach, where threat actors were able to access production servers and according to some sources, client’s sensitive information. The attack happened late last week that put AnyDesk’s 170,000 customers at risk including NVIDIA, Samsung, Comcast, and even the United Nations. Initial access has not been released to the public; however, it was clear that the attackers were planning to use AnyDesk as a conduit to infect their customers and partners.
+ 
+Sources claim that the threat actor was able to steal source code and code signing certificates for their software. This means that the certificates of the compromised software versions could be used to manipulate the code to implement a backdoor or create a supply chain attack with a legitimate version of AnyDesk. It can also allow a bad actor to sign their own piece of software, with the stolen certificate, which can fool security personnel (or Antivirus) or customers into thinking something is published by the company. The loss of source code is also a loss of intellectual property which comes with a loss of exclusivity (product duplication), making the innerworkings of the platform, not so secret.
+ 
+Spiceworks noted that shortly following the breach, a security analyst made an observation on the Dark web of 18,317 AnyDesk customer credentials going up on sale for $15,000. The seller noted that “This data is ideal for technical support scams and mailing (phishing)”. The source also claims that the breach could potentially expose AnyDesk customers’ license keys, number of active connections, duration of sessions, customer ID and contact information, email associated with the account, and the total number of hosts that have remote access management software activated.
+ 
+AnyDesk stated that session hijacking posed no risk in this case. Consequently, they have reset passwords for the online portal and revoked the compromised signature keys and certificate. Additionally, they have advised clients to change their passwords on other sites should they coincide with their AnyDesk password, as a precautionary measure. The AnyDesk tool was non-operational for only a few days.
+ 
+This case was particularly spooky because it resembles the 2019-2020 SolarWinds breach that infected 18,000 customers within the federal and private sectors with a trojanized version of SolarWinds Orion. Some dub this as one of the most widespread and sophisticated hacking campaigns ever conducted against the federal government and private sector. AnyDesk’s case was caught just one phase prior to this.
+ 
+Resources:
+https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
+https://www.spiceworks.com/it-security/data-security/news/anydesk-server-breach/
+https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic
