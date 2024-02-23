@@ -403,4 +403,4 @@ Resources:
 - https://www.youtube.com/watch?v=-jKykhKKMZw
 
 ## 2024-02-23 - ScreenConnect Vulnerability <a name="scvuln"></a>
-<INPRO>
+In progress.
