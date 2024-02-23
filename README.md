@@ -37,6 +37,8 @@
       - [NetScaler CVEs](#netscaler)
       - [Ivanti CVEs](#ivanti)
       - [AnyDesk Breach](#any)
+      - [LockBit Disruption](#lock)
+      - [ScreenConnect Vulnerability](#scvuln)
 
 
 ## Description
@@ -384,3 +386,21 @@ Resources:
 - https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
 - https://www.spiceworks.com/it-security/data-security/news/anydesk-server-breach/
 - https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic
+
+
+## 2024-02-20 - LockBit Disruption <a name="lock"></a>
+I recently looked into the recent joint operation conducted by the United States Government organizations and the United Kingdom, “Operation Cronos”. This operation was a very large success story against the alleged Russian threat actor group named LockBit. LockBit may be the most prolific ransomware-as-a-service groups in the world. They are responsible for roughly 2,000 confirmed cyber-attacks, begging forfeiture of nearly $150 million worth of ransom payments received ($90 million from The United States) from big-wigged organizations such as Boeing, The Ministry of Defense of the United Kingdom, Royal Mail Service, and many more.
+
+The operation began in April 2022, headed by the U.K. National Crime Agency, and resulted in the seizure of 34 servers in the Netherlands, Germany, Finland, France, Switzerland, Australia, the United States and the United Kingdom, dark web websites, 14,000 rogue accounts, 200 cryptocurrency wallets, and the creation of the LockBit variant 3.0 (Black) decryption tool. Funds that were seized may be eligible for reimbursement depending on correlation of transactions. Two Russian members of the organization were indicted, and the U.S. State Department is now offering rewards of up to $15 million for information about additional members and their associates.
+
+LockBit was notably the longest running ransomware group to date, falling just after the ALPHHV (BlackCat) and Hive ransom groups. Per the reports, this operation only caused a “disruption” and additional LockBit sites could very well be active and conducting operations.
+
+Resources:
+- https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-165a
+- https://www.bleepingcomputer.com/news/security/police-arrest-lockbit-ransomware-members-release-decryptor-in-global-crackdown/
+- https://www.justice.gov/opa/pr/us-and-uk-disrupt-lockbit-ransomware-variant
+- https://www.bleepingcomputer.com/news/security/us-offers-15-million-bounty-for-info-on-lockbit-ransomware-gang/
+- https://www.youtube.com/watch?v=-jKykhKKMZw
+
+## 2024-02-23 - ScreenConnect Vulnerability <a name="scvuln"></a>
+<INPRO>
